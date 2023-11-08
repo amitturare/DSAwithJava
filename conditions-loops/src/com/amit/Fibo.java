@@ -1,0 +1,33 @@
+package com.amit;
+
+import java.util.Scanner;
+
+public class Fibo {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int n = in.nextInt();
+        int p = 0;
+        int i = 1;
+        int count = 2;
+
+        if (n < 0) {
+            System.out.println("Incorrect input!");
+        }
+        else if (n == 0) {
+            System.out.println(p);
+        }
+        else if (n == 1) {
+            System.out.println(i);
+        }
+        else {
+            while (count <= n) {
+                int temp = i;
+                i = i + p;
+                p = temp;
+                count++;
+            }
+            System.out.println(i);
+        }
+    }
+}
