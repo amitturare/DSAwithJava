@@ -7,7 +7,8 @@ public class QPalindrome {
         Scanner in = new Scanner(System.in);
 
         String inputStr = in.next().trim();
-        String reverseStr = reverseString(inputStr);
+        String reversedStr = reverseString(inputStr);
+        System.out.println(reversedStr);
 
 //        for (int i = 0; i < inputStr.length(); i++) {
 //            char letter = inputStr.charAt(i);
@@ -15,7 +16,7 @@ public class QPalindrome {
 //          System.out.println(reverseStr);
 //        }
 
-        if (inputStr.equalsIgnoreCase(reverseStr)) {
+        if (inputStr.equalsIgnoreCase(reversedStr)) {
             System.out.println("It is a palindrome.");
         } else {
             System.out.println("It is not a palindrome.");
@@ -24,13 +25,15 @@ public class QPalindrome {
 
     }
 
-    static String reverseString(String inputStr) {
-        String reverseStr = "";
-        for (int i = 0; i <= inputStr.length() - 1; i++) {
-            char letter = inputStr.charAt(i);
-            reverseStr = letter + reverseStr;
+    static String reverseString(String in) {
+        StringBuilder reversedStr = new StringBuilder();
+
+        for (int i = 0; i < in.length(); i++) {
+            char ch = in.charAt(in.length() - i - 1);
+            reversedStr.append(ch);
         }
-        return reverseStr;
+
+        return reversedStr.toString();
     }
 }
 

@@ -7,32 +7,49 @@ public class ArrayListExample {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         /*
-            Syntax of array list:
-                ArrayList<datatype> list = new ArrayList<>();
-         */
-        ArrayList<Integer> list = new ArrayList<Integer>(5);
-//        list.add(6);
-//        list.add(45);
-//        list.add(456);
-//        list.add(31);
-//        list.add(6);
-//        list.add(69);
-//
-//        System.out.println(list.contains(69));
-//        System.out.println(list);
-//        list.set(0, 99);
-//        list.remove(2);
-//        System.out.println(list);
+            ArrayList is used when there is no idea of the length of the array.
+            Here Java handles the length itself. Similar to vectors in C++.
 
-        // input
+            Initially the size is fixed internally. Now if the arraylist is filled
+            more than the capacity,
+            First it creates a new arrayList of say, double the size.
+            Then old elements are copied in the new one and then old elements
+            are copied in the new one. Later the old list gets deleted.
+
+            Syntax,
+            ArrayList<dataType> variableName = new ArrayList<>(initialCapacity);
+
+            dataType accepts wrapper classes instead of the primitives.
+            For Example, String, Integer, etc.
+        */
+        ArrayList<Integer> list = new ArrayList<>(2);
+
+        // Any number of elements can be added inside
+        list.add(67);
+        list.add(78);
+        list.add(69);
+        list.add(7);
+        list.add(0);
+
+        System.out.println(list);
+
+        // Check if list contains a specific element
+        System.out.println(list.contains(69)); // Outputs: true
+
+        // Update an element
+        list.set(0, 100); // Change the value of 0th index to 100
+        System.out.println(list);
+
+        // Remove an element
+        list.remove(2); // Removes the element at 2nd index.
+        System.out.println(list);
+
+        ArrayList<Integer> list1 = new ArrayList<>(2);
+
+        // Inputting values into the list
         for (int i = 0; i < 5; i++) {
-            list.add(in.nextInt());
+            list1.add(in.nextInt());
         }
-
-        // Get item at any index
-        for (int i = 0; i < 5; i++) {
-            System.out.print(list.get(i) + " ");
-        }
-
+        System.out.println(list1);
     }
 }

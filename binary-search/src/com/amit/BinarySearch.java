@@ -1,33 +1,28 @@
 package com.amit;
 
 public class BinarySearch {
-
     public static void main(String[] args) {
-        int[] arr = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
-        int target = 22;
-        int ans = binarySearch(arr, target);
-        System.out.println(ans);
+        int[] arr = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        int target = 21;
+
+        System.out.println(binarySearch(arr, target));
     }
 
-    // return the index
-    // return -1 if it doesn't exist
-    static int binarySearch (int[] arr, int target) {
+    // Return the index of the target
+    static int binarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
 
         while (start <= end) {
-            // find the middle element
-//            int mid = (start + end) / 2;
-            // might be possible that (start + end) exceeds the range of int in JAVA
+//            int mid = (start + end) / 2; // Might be possible that (start + end) exceeds the range of int in Java
             int mid = start + (end - start) / 2;
 
-            if (target < arr[mid]) {
-                end = mid - 1;
-            } else if (target > arr[mid]) {
-                start = mid + 1;
-            } else {
-                // found answer
+            if (arr[mid] == target) {
                 return mid;
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+            } else if (arr[mid] > target) {
+                end = mid - 1;
             }
         }
         return -1;

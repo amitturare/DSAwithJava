@@ -1,6 +1,5 @@
 package com.amit;
 
-import javax.swing.text.html.CSS;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,38 +7,31 @@ public class Input {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        // Array of primitives
         int[] arr = new int[5];
-        arr[0] = 23;
-        arr[1] = 45;
-        arr[2] = 233;
-        arr[3] = 543;
-        arr[4] = 3;
-        // [23, 45, 233, 543, 3]
-//        System.out.println(arr[3]);
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 3;
+        arr[3] = 4;
+        arr[4] = 5;
+//        System.out.println(arr[2]); // Outputs: 3
 
-//        // input using for loop
-//        for (int i = 0; i < arr.length; i++) {
-//            arr[i] = in.nextInt();
-//        }
-//
-//        // To print the elements of the array
-//        for (int num : arr) { // For every element in array, print the element
-//            System.out.print(num + " "); // Here `num` represents the element of the array
-//        }
-
-        // Izi method to print the array
-//        System.out.println(Arrays.toString(arr));
-
-        // Array of objects
-        String[] str = new String[4];
-        for (int i = 0; i < str.length; i++) {
-            str[i] = in.next();
+        // Inputting using for loops,
+        int[] arr1 = new int[5];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = in.nextInt();
         }
-        System.out.println(Arrays.toString(str));
 
-        // Modify
-        str[1] = "Amit";
-        System.out.println(Arrays.toString(str));
+        // Print the elements of the arr1
+//        for (int i = 0; i < arr1.length; i++) {
+//            System.out.print(arr1[i] + " ");
+//        }
+
+        // Print the elements of the arr1 using enhanced for loop
+        for (int num: arr1) { // For every element in array, print the element
+            System.out.print(num + " "); // Here num represents the element of the arr1
+        }
+
+        // Print the array using .toString() method
+        System.out.println(Arrays.toString(arr1));
     }
 }
