@@ -156,6 +156,7 @@ public class CustomLL {
         public Node(int val) {
             this.value = val;
         }
+
         public Node(int val, Node nextNode) {
             this.value = val;
             this.next = nextNode;

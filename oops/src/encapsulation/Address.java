@@ -1,4 +1,4 @@
-package day2_encapsulation;
+package encapsulation;
 
 public class Address {
     private int fno, pinCode;

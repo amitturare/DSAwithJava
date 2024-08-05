@@ -1,7 +1,6 @@
 package com.amit.singlyLL;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package day2_encapsulation;
+package encapsulation;
 
 /*
     Encapsulation: Wrapping up of data under a single entity.
